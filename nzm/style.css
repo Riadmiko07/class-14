@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(19, 73, 122);
+    font-family: Century ;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    text-align: center;
+    text-transform: capitalize;
+    color: greenyellow;
+    margin: 10px 0;
+    position: relative;
+}
+
+.title::after {
+    content: "";
+    position: absolute;
+    width: 20%; height: 2px;
+    background-image: linear-gradient(to left, transparent 5%, greenyellow);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.team-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 40px 0;
+}
+
+.member {
+    flex: 1 1 250px;
+    margin: 20px;
+    text-align: center;
+    padding: 20px 10px;
+    cursor: pointer;
+    max-width: 300px;
+    transition: all 0.3s;
+}
+
+.member:hover {
+    box-shadow: 0 10px 20px greenyellow;
+    transform: translateY(-20px);
+}
+
+.member img {
+    display: block;
+    width: 150px; height: 150px;
+    object-fit: cover;
+    border: 4px solid greenyellow;
+    border-radius: 50%;
+    margin:  auto;
+}
+
+
+.member h2 {
+    text-transform: uppercase;
+    font-size: 24px;
+    color: greenyellow;
+    margin: 15px 0;
+}
+
+.member p {
+    font-size: 15px;
+    color: greenyellow;
+    line-height: 1.6;
+}
